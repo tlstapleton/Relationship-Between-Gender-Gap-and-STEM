@@ -1,25 +1,217 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Relationship between STEM Graduates and the Gender Gap Index</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Women in STEM</title>
+
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.css" rel="stylesheet">
+
 </head>
 
 <body>
-<h1>Relationship between STEM Graduates and the Gender Gap Index</h1>
-<img src="http://lorempixel.com/output/abstract-q-c-640-480-2.jpg" alt="Placeholder">
-<br>
-<p>The Gender Gap Index is alskdjf;alskjdfl;askdjf;laksdjf</p>
 
-<p>  Maecenas et tempor metus. Fusce ornare urna sit amet faucibus consectetur. Donec ligula lorem, 
-  ultricies quis nunc vitae, pellentesque pharetra dui. Nullam semper leo eget sapien maximus, non semper mauris porttitor. 
-  Vestibulum molestie felis eu est mollis, sit amet posuere mi sagittis. Nam vel purus at lacus venenatis convallis nec a nisl. 
-  In et fermentum ante. Proin ut accumsan augue. Vivamus ultricies ligula ultricies lorem aliquam suscipit. In feugiat nulla sapien, 
-  quis dignissim lorem convallis quis. Curabitur viverra nisl id purus lobortis, iaculis elementum dui vehicula. Suspendisse facilisis a 
-  lacus id pharetra. Maecenas diam mauris, rutrum eleifend quam non, vestibulum finibus ligula. Donec varius ultricies lobortis.
-   Ut lobortis ut velit id ullamcorper.</p>
+  <div class="container-fluid p-0">
+      <section class="top-section p-3 p-lg-5 d-flex align-items-center">
+      <div style="background: color url('https://pi.tedcdn.com/r/talkstar-assets.s3.amazonaws.com/production/playlists/playlist_253/women_in_stem_1200x627.jpg')">
+      <div>
+        <h1>Women in
+          <span class="text-primary">STEM</span>
+          <span class="text-secondary">A Visualization by Toni Stapleton</span>
+        </h1>
+        <p class="lead">This data visualization project was inspired by an <a href='https://www.theatlantic.com/science/archive/2018/02/the-more-gender-equality-the-fewer-women-in-stem/553592/', target = "_blank">article</a> 
+          which referenced a study that found countries with lower gender equality had higher rates of females graduating from tertiary education in a STEM field.  Of course, upon first glance, this
+          seems highly paradoxical.  I decided to pull data to visualize and verify this claim.
+        </p>
+        <p class="lead">Data was pulled from various sources.  The Gender Gap Index values were attained from the <a href="https://tcdata360.worldbank.org/indicators/af52ebe9?country=BRA&indicator=27962&viz=line_chart&years=2006,2016#">World Bank</a>.  
+          According to the World Bank, "The Global Gender Gap Index examines the gap between men and women in four fundamental categories : Economic Participation and Opportunity, 
+          Educational Attainment, Health and Survival and Political Empowerment...The Index focuses on measuring gaps rather than levels. The highest possible score is 1 
+          (equality) and the lowest possible score is 0 (inequality)."  GDP data was also sourced from the <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?view=map">
+          World Bank</a>.  The GDP measurements are shown as GDP per capita in U.S. Dollars.  The STEM graduation data was pulled from 
+          <a href="http://data.uis.unesco.org/Index.aspx?DataSetCode=EDULIT_DS">Unesco's Education Data Portal</a>, 
+          and measures the percentage of STEM graduates from tertiary education that are female country by country.</p>
+        <p class="lead">All data was cleansed and analyzed using Python and Pandas.  The data is plotted using Plotly.
+          The following scatter plots are interactive.  Click on a regional category in the legend on the right to remove from the plot, double click to isolate
+          that regional category.
+        </p>
+      </div>
+      </div>
+    </section>
 
-<h2>Images</h2>
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="GDP-Gender-Gap">
+      <div class="w-100">
+        <h2 class="mb-5">Percent of Females Graduating in STEM Fields vs Gender Gap Index</h2>
+        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~tlstapleton/4.embed" height="725" width="100%"></iframe>
+        <p class="insight">49.5&#37;: The percent of STEM graduates in tertiary education that are women in Syria, the country with the lowest Gender Gap Index
+        </p>
+        <p class="insight">27&#37;: The percent of STEM graduates in tertiary education that are women in Finland, the country with the highest Gender Gap Index
+          </p>
+        <p class="lead">There is no clear relationship between a country's Gender Gap Index and the percent of females graduating from tertiary education in a STEM
+          field in that country.  However, it is clear that a higher Gender Gap Index does not equate to more women studying STEM.  So, what does this mean?  What other factors can 
+        be analyzed in relation to percentage of STEM graduates that are female? </p>
+      </div>
+    </section>
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="GDP-Gender-Gap">
+      <div class="w-100">
+        <h2 class="mb-5">Percent of Females Graduating in STEM Fields vs GDP Per Capita</h2>
+        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~tlstapleton/6.embed" height="725" width="100%"></iframe>
+        <p class="insight">30.7&#37;: The percent of STEM graduates in tertiary education that are women in Kenya, whose GDP per capita is less than &#36;1,500.
+          </p>
+          <p class="insight">27.5&#37;: The percent of STEM graduates in tertiary education that are women in Luxembourg, whose GDP per capita is over &#36;100k
+            </p>
+        <p class="lead">A country's GDP also does not have a clear correlation with that country's female STEM graduation rate.  In fact, the countries with the highest percentage of their STEM
+          graduates being female are those with a GDP per capita that is relatively average.  The United States' percent of STEM graduates from tertiary eduation that are female is 
+          approximately 34&#37;.  Every country in the Middle East &amp; Northern Africa other than Iran, Malta, and Qatar has a higher percentage of STEM graduates that are female than the United States.
+        </p>
+        <p class="lead">So, how does the Gender Gap Index relate to a country's GDP?</p>
+      </div>
+
+    </section>
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="GDP-Gender-Gap">
+      <div class="w-100">
+        <h2 class="mb-5">Gender Gap Index vs GDP</h2>
+        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~tlstapleton/8.embed" height="725" width="100%"></iframe>
+        <p class="insight">0.77: The Gender Gap Index of Burundi, the poorest country in the world.
+          </p>
+          <p class="insight">0.73: The Gender Gap Index of Luxembourg, the richest country in the world.
+            </p>
+        <p class="lead">GDP has little to no effect on a country's Gender Gap Index.  It is true that the handful of countries with the highest Gender Gap Indices have higher GDPs,
+          but most every other country has a gender gap index between 0.6 and 0.8, regardless of GDP.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- <hr class="m-0"> -->
+<!-- 
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">Education</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Northwestern University, Chicago, IL</h3>
+            <div class="subheading mb-3">Data Science Bootcamp Certificate</div>
+            <p>A 24-week intensive certificate program focused on gaining technical programming skills in Excel, VBA, Python, JavaScript, 
+              SQL and NoSQL Databases, Tableau, D3, HTML, Web Scraping, AI, and Machine Learning</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">November 2018 - May 2019 (Expected)</span>
+          </div>
+        </div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+            <div class="resume-content">
+              <h3 class="mb-0">Northwestern University, Evanston, IL</h3>
+              <div class="subheading mb-3">Bachelor of Arts in Mathematics</div>
+              <p>Coursework included: Real Analysis, Complex Analysis, Multivariable Calculus, Linear Algebra</p>
+              <div class="subheading mb-3">Bachelor of Arts in Mathematical Methods in the Social Sciences</div>
+              <p>Coursework included: Econometrics, Probability and Statistics, Microeconomics, Game Theory, Introduction to Non-Profit Consulting</p>
+              <p>Completed Senior Thesis focused on analyzing city government crime data in Philadelphia, PA using geomapping techniques</p>
+              <div class="subheading mb-3">Bachelor of Arts in French</div>
+              <p>Completed semester at Sorbonne Universit&eacute; in Paris, France</p>
+            </div>
+            <div class="resume-date text-md-right">
+              <span class="text-primary">September 2013 - June 2017</span>
+            </div>
+          </div>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">Thomas Jefferson High School for Science and Technology, Alexandria, VA</h3>
+            <p>SAT:  Math: 770 / 800 · Critical Reading: 800 / 800 · Writing: 800 / 800 | ACT: 35 / 36</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">September 2009 - June 2013</span>
+          </div>
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+      <div class="w-100">
+        <h2 class="mb-5">Skills</h2>
+
+        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-python"></i>
+          </li>
+          <li class="list-inline-item">
+              <i class="fab fa-github"></i>
+            </li>
+          <li class="list-inline-item">
+            <i class="fab fa-css3-alt"></i>
+          <li class="list-inline-item">
+            <i class="fab fa-html5"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-js-square"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-jira"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fas fa-terminal"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fas fa-database"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fas fa-file-excel"></i>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3">Other Technical Skills</div>
+        <ul class="fa-ul mb-0">
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Pandas, Numpy, Scikit-learn</li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Alteryx</li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            VBA</li>
+          <li>
+            <i class="fa-li fa fa-check"></i>
+            Data Visualization (Matplotlib, Plotly, Tableau, D3.js)</li>
+        </ul>
+      </div>
+    </section> -->
+
+    <!-- <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
+      <div class="w-100">
+        <h2 class="mb-5">Interests</h2>
+        <p>Apart from exploring and analyzing data, I enjoy being active by working out and playing sports.  I participate on an intramural softball team.  I also 
+          enjoy running and have participated in several races, including the Big Ten 10K in Chicago, IL and the Army Ten-Miler in Washington, D.C.  
+        </p>
+        <p class="mb-0">I also enjoy continuing my study and practice of the French language as a member of the Alliance Francaise.  I participate in conversation
+          clubs and other events at the Alliance.
+        </p>
+      </div>
+    </section>
+
+    <hr class="m-0"> -->
+
+  </div>
 
 
 </body>
